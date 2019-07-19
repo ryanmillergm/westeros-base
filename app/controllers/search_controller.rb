@@ -7,6 +7,7 @@ class SearchController < ApplicationController
 
   results = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes][:members]
 
+  @house = JSON.parse(response.body, symbolize_names: true)[:data][0][:attributes][:name]
   @members  = results.map do |result|
      Member.new(result)
   end

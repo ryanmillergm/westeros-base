@@ -18,7 +18,7 @@ RSpec.describe "As a user" do
           click_on "Get Members"
 
           expect(current_path).to eq(search_path)
-
+          save_and_open_page
           expect(page).to have_content("7 Members of House Greyjoy")
 
           expect(page).to have_css(".member", count: 7)
