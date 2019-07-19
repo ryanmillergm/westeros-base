@@ -1,0 +1,6 @@
+<%= @members.count %> Results
+<% @members.each do |member| %>
+<ul class="member">
+  <li class="name"><%= member.name %></li>
+</ul>
+<% end %>
